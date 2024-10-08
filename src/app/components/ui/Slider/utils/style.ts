@@ -28,7 +28,7 @@ export const getItemStyles = (isFullWidthImg: boolean): CSSProperties => {
   let style: Record<string, string> = {};
 
   style.height = "100%";
-  style.width = isFullWidthImg ? "100%" : "auto";
+  style.width = isFullWidthImg ? "100%" : "60%";
 
   if (!isFullWidthImg) {
     style.maxWidth = "90%";
@@ -44,7 +44,7 @@ export const getImageStyles = (
 ): CSSProperties => {
   const style: Record<string, string> = {
     transform: `scale(${currentZoom}) translate(${currentTranslate.translateX}%, ${currentTranslate.translateY}%)`,
-    objectFit: "cover",
+    objectFit: isFullWidthImg ? "cover" : "contain",
   };
 
   if (isFullWidthImg) {

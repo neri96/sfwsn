@@ -1,7 +1,15 @@
-import { useCallback, useReducer, memo } from "react";
+import {
+  useRef,
+  useCallback,
+  useReducer,
+  memo,
+  useEffect,
+  useState,
+} from "react";
 
 import CldImage from "../CldImage";
 import SliderZoomControllers from "./SliderZoomControllers";
+import Loading from "../Loading";
 
 import { ItemImageData } from "@/app/ts/interfaces";
 import { ITranslate, TranslateAction } from "./ts/interfaces";
@@ -51,6 +59,11 @@ const SliderItem = ({
   zoomControllers,
   carouselLength,
 }: IProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const [imageHeight, setImageHeight] = useState(0);
+  const [imageWidth, setImageWidth] = useState(0);
+
   const [currentTranslate, dispatch] = useReducer(reducer, {
     translateY: 0,
     translateX: 0,
@@ -61,6 +74,18 @@ const SliderItem = ({
     []
   );
 
+  useEffect(() => {
+    const height = ref.current?.offsetHeight;
+    const width = ref.current?.offsetWidth;
+
+    if (height && width) {
+      setImageHeight(height);
+      setImageWidth(width);
+    }
+  }, []);
+  console.log(imageHeight);
+  console.log(imageWidth);
+
   return (
     <>
       <div
@@ -68,6 +93,7 @@ const SliderItem = ({
         style={{ width: `${100 / carouselLength}%` }}
       >
         <div
+          ref={ref}
           className={style.imageWrapper}
           style={styleFn.getItemStyles(isFullWidthImg)}
         >
@@ -78,18 +104,22 @@ const SliderItem = ({
               dispatchTranslate={dispatchTranslate}
             />
           ) : null}
-          <CldImage
-            className={style.sliderImage}
-            style={styleFn.getImageStyles(
-              currentZoom,
-              currentTranslate,
-              isFullWidthImg
-            )}
-            src={src}
-            alt={`Example of ${title}`}
-            height={500}
-            width={500}
-          />
+          {imageHeight && imageWidth ? (
+            <CldImage
+              className={style.sliderImage}
+              style={styleFn.getImageStyles(
+                currentZoom,
+                currentTranslate,
+                isFullWidthImg
+              )}
+              src={src}
+              alt={`Example of ${title}`}
+              height={imageHeight}
+              width={imageWidth}
+            />
+          ) : (
+            <Loading />
+          )}
         </div>
       </div>
     </>
