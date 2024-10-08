@@ -3,15 +3,13 @@
 import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-import Image from "next/image";
+import CldImage from "../CldImage";
 
 import style from "./style.module.scss";
 
-interface ICarouselProps {
-  data: { title: string; src: string }[];
-}
+import { ICarouselProps } from "@/app/ts/interfaces";
 
-const Carousel = ({ data }: ICarouselProps) => {
+const Carousel = ({ data }: { data: ICarouselProps[] }) => {
   const controls = useAnimation();
   const slideWrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -44,7 +42,7 @@ const Carousel = ({ data }: ICarouselProps) => {
       >
         {[...data, ...data].map(({ title, src }, i) => (
           <div key={i} className={style.item}>
-            <Image src={src} alt={title} />
+            <CldImage src={src} alt={title} height={500} width={500} />
           </div>
         ))}
       </motion.div>

@@ -24,10 +24,7 @@ export const getCarouselStyle = (
   return style;
 };
 
-export const getItemStyles = (
-  isFullWidthImg: boolean,
-  isDescr: boolean
-): CSSProperties => {
+export const getItemStyles = (isFullWidthImg: boolean): CSSProperties => {
   let style: Record<string, string> = {};
 
   style.height = "100%";
@@ -35,17 +32,6 @@ export const getItemStyles = (
 
   if (!isFullWidthImg) {
     style.maxWidth = "90%";
-  }
-
-  if (isDescr) {
-    style = {
-      ...style,
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundImage:
-        "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))",
-    };
   }
 
   return style;

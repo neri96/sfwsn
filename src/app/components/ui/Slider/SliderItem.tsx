@@ -1,15 +1,7 @@
-import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  useReducer,
-  memo,
-} from "react";
+import { useCallback, useReducer, memo } from "react";
 
 import CldImage from "../CldImage";
 import SliderZoomControllers from "./SliderZoomControllers";
-import SliderContent from "./SliderContent";
 
 import { ItemImageData } from "@/app/ts/interfaces";
 import { ITranslate, TranslateAction } from "./ts/interfaces";
@@ -53,7 +45,7 @@ const reducer = (
 };
 
 const SliderItem = ({
-  data: { title, src, description },
+  data: { title, src },
   currentZoom,
   isFullWidthImg,
   zoomControllers,
@@ -77,7 +69,7 @@ const SliderItem = ({
       >
         <div
           className={style.imageWrapper}
-          style={styleFn.getItemStyles(isFullWidthImg, Boolean(description))}
+          style={styleFn.getItemStyles(isFullWidthImg)}
         >
           {zoomControllers ? (
             <SliderZoomControllers
@@ -99,9 +91,6 @@ const SliderItem = ({
             width={500}
           />
         </div>
-        {description ? (
-          <SliderContent title={title} src={src} description={description} />
-        ) : null}
       </div>
     </>
   );

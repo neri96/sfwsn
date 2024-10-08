@@ -42,3 +42,8 @@ export interface IFormInput {
   features?: string[];
   survey: string[];
 }
+
+export interface ICarouselProps {
+  title: string;
+  src: string;
+}
