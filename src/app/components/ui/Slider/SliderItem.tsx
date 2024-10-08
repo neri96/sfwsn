@@ -83,8 +83,6 @@ const SliderItem = ({
       setImageWidth(width);
     }
   }, []);
-  console.log(imageHeight);
-  console.log(imageWidth);
 
   return (
     <>
