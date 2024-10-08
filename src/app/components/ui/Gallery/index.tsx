@@ -1,17 +1,18 @@
 import { AnimatePresence } from "framer-motion";
+import { v4 as uuid } from "uuid";
 
 import GalleryCarousel from "./GalleryCarousel";
 
 import { CtxGalleryImages } from "@/app/context/gallery";
 
-import { ItemImageData } from "../Slider/ts/interfaces";
+import { ItemImageData } from "@/app/ts/interfaces";
 
-type ImageArray = ItemImageData[] | string[];
+type ItemArray = ItemImageData[] | string[];
 
-const normalizeItems = (array: ImageArray) => {
+const normalizeItems = (array: ItemArray): ItemImageData[] => {
   return array.map((element, index) => {
     return typeof element === "string"
-      ? { id: index, title: `Example of our work ${index}`, src: element }
+      ? { id: uuid(), title: `Example of our work ${index}`, src: element }
       : element;
   });
 };
@@ -22,7 +23,7 @@ const Gallery = ({
   carouselOpen,
   toggleCarousel,
 }: {
-  items: ImageArray;
+  items: ItemArray;
   initialIndex: number;
   carouselOpen: boolean;
   toggleCarousel: () => void;
