@@ -9,4 +9,6 @@ const CldImage = forwardRef<HTMLImageElement, CldImageProps>(
   }
 );
 
+CldImage.displayName = "CldImage";
+
 export default CldImage;

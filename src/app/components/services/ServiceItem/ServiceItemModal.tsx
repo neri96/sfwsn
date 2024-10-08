@@ -40,7 +40,7 @@ const ServiceItemModal = ({
         setLoading(false);
       }
     })();
-  }, [slug]);
+  }, [slug, router]);
 
   if (loading || !data) return <Loading />;
 

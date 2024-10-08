@@ -82,7 +82,7 @@ const ToolTip = ({
 
   useEffect(() => {
     if (isPopupOpen) setIsToolTipOpen(false);
-  }, [isPopupOpen]);
+  }, [isPopupOpen, setIsToolTipOpen]);
 
   const handleToggle = () => {
     if (!isTouchDevice) {

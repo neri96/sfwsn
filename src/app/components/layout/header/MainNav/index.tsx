@@ -43,11 +43,11 @@ const MainNav = () => {
 
   useEffect(() => {
     setIsClient(true);
-  }, []);
+  }, [setIsClient]);
 
   useEffect(() => {
     setMenuOpen(!isSmallScreen);
-  }, [isSmallScreen]);
+  }, [isSmallScreen, setMenuOpen]);
 
   if (!isClient) return null;
 

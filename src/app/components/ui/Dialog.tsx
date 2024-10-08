@@ -15,15 +15,15 @@ const Dialog = ({
   withOVerlay?: boolean;
   children: ReactNode;
 }) => {
+  const handleKeyPress = (e: KeyboardEvent) => {
+    if (e.key === "Escape") onClose();
+  };
+
   useEffect(() => {
     document.addEventListener("keydown", handleKeyPress);
 
     return () => document.removeEventListener("keydown", handleKeyPress);
-  }, []);
-
-  const handleKeyPress = (e: KeyboardEvent) => {
-    if (e.key === "Escape") onClose();
-  };
+  }, [handleKeyPress]);
 
   return (
     <motion.div
