@@ -1,0 +1,18 @@
+.images {
+  column-count: 3;
+  column-gap: 3px;
+  img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    column-count: 2;
+  }
+
+  @media (max-width: 600px) {
+    column-count: 1;
+  }
+}

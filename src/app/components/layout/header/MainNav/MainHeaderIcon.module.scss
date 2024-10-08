@@ -1,0 +1,28 @@
+.icon {
+  height: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  img {
+    height: 80%;
+    width: 100%;
+  }
+}
+
+.iconSmall {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .icon {
+    width: 110px;
+  }
+
+  .iconSmall {
+    display: block;
+  }
+
+  .iconLarge {
+    display: none;
+  }
+}

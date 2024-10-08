@@ -1,0 +1,15 @@
+.social {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.item {
+  height: 40px;
+  width: 40px;
+  margin: 0 10px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+.contactOptions {
+  height: 50px;
+  ul {
+    height: 100%;
+    display: flex;
+  }
+}
+
+.contactOption {
+  transition: 300ms;
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h4 {
+    margin: 0;
+  }
+}
+
+.chosenOption {
+  background-color: #666;
+}

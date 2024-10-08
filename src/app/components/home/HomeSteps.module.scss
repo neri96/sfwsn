@@ -1,0 +1,108 @@
+@import "../../style/theme.scss";
+@import "../../style/mixin.scss";
+
+.homeSteps {
+  display: flex;
+  flex-direction: column;
+}
+
+.homeStepsContent {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  justify-content: start;
+  grid-auto-rows: 1fr;
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.homeStepsElem {
+  height: 550px;
+  position: relative;
+  text-align: center;
+  line-height: 22px;
+  border-radius: $borderRadius;
+  box-sizing: border-box;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  overflow: hidden;
+  @include glassBackground;
+}
+
+.homeStepsElemHeader {
+  height: 230px;
+  margin: 0;
+  background-image: radial-gradient(
+    at top left,
+    #141e30 36%,
+    #243b55 67%,
+    transparent 67.5%
+  );
+  background-size: 120% 100%;
+  background-repeat: no-repeat;
+  border-top-left-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeStepsElemIcon {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $backgroundColor2;
+  margin-top: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.homeStepsElemTitle {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.homeStepsElemContent {
+  padding: 0 10px;
+  height: calc(100% - 300px);
+  p {
+    margin: 0;
+  }
+  @media (max-width: 1200px) {
+    p {
+      padding-top: 30px;
+    }
+  }
+}
+
+.homeStepsElemDeadline {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #141e30, #243b55);
+}

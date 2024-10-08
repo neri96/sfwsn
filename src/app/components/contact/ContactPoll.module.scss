@@ -1,0 +1,13 @@
+.contactTitle {
+  padding: 10px 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h4 {
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 25px;
+  }
+}

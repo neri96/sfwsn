@@ -1,0 +1,35 @@
+@import "../../../style/mixin.scss";
+
+.materials {
+  z-index: 10001;
+  margin-top: 10px;
+  li {
+    height: 50px;
+    width: 150px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.details {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: $backgroundColor2;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: 300ms background-color;
+  @include glassBackground;
+  &:hover {
+    background-color: rgba(13, 13, 13, 0.7);
+  }
+  span {
+    margin-right: 5px;
+  }
+}

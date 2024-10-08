@@ -1,0 +1,35 @@
+@import "../../../style/theme.scss";
+
+.carousel {
+  height: 550px;
+  width: 100%;
+  border-radius: $borderRadius;
+  overflow: hidden;
+}
+
+.slideWrapper {
+  height: 100%;
+  display: flex;
+}
+
+.item {
+  height: 100%;
+  min-width: calc(100% / 3);
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: $borderRadius;
+  }
+
+  @media (max-width: 900px) {
+    min-width: calc(100% / 2);
+  }
+
+  @media (max-width: 900px) {
+    min-width: 100%;
+  }
+}

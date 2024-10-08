@@ -1,0 +1,21 @@
+.form {
+  padding: 20px 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.wizard {
+  display: flex;
+  transition: 300ms ease-in-out;
+}
+
+.wizardElem {
+  width: 100%;
+}
+
+.wizardBottom {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

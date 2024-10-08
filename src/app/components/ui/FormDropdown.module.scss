@@ -1,0 +1,14 @@
+@import "../../style/mixin.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  select {
+    @include inputStyles;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+}

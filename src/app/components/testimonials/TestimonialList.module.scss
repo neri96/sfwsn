@@ -1,0 +1,15 @@
+.container {
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  @media (max-width: 1250px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 775px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

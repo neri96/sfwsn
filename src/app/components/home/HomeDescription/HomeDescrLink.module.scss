@@ -1,0 +1,53 @@
+@import "../../../style/mixin.scss";
+
+.tabLinkContainer {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  @media (max-width: 940px) {
+    height: auto;
+    width: 150px;
+  }
+}
+
+.tabLinks {
+  width: 822px;
+  position: relative;
+  display: flex;
+  @media (max-width: 940px) {
+    flex-direction: column;
+  }
+}
+
+.tabLink {
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  position: absolute;
+  button {
+    height: 70px;
+    width: 150px;
+    border-radius: $borderRadius;
+    outline: none;
+    transition: 300ms ease-in-out;
+    transform: rotateY(25deg);
+    text-transform: uppercase;
+    cursor: pointer;
+    @include glassBackground;
+
+    &:hover {
+      transform: rotateY(10deg);
+    }
+  }
+
+  @media (max-width: 940px) {
+    position: static;
+  }
+}
+
+.tabLinkCurrent {
+  button {
+    background-color: rgba(13, 13, 13, 0.7);
+  }
+}

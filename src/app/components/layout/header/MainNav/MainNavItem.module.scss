@@ -1,0 +1,21 @@
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  visibility: hidden;
+  will-change: transform;
+
+  img {
+    @media (max-width: 750px) {
+      transform: scale(1);
+      position: static;
+    }
+  }
+}
+
+.title {
+  text-transform: capitalize;
+  cursor: pointer;
+}

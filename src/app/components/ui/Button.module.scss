@@ -1,0 +1,38 @@
+@import "../../style/theme.scss";
+
+.button {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  background-color: $backgroundColor2;
+  &:active {
+    transform: scale(1.1) rotate(15deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.noBg {
+  background-color: transparent;
+}
+
+.icon {
+  font-size: inherit;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}

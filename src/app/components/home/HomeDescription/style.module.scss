@@ -1,0 +1,10 @@
+.homeDescrTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  @media (max-width: 940px) {
+    height: 430px;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../style/mixin.scss";
+
+.dialog {
+  height: 500px;
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include glassBackground;
+}
+
+.title,
+.footer {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  height: calc(100% - 140px);
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}

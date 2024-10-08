@@ -1,0 +1,17 @@
+.footerIcons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footerIconItem {
+  height: 70px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 5px;
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  min-height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  padding: 0 10px;
+  box-sizing: border-box;
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+  }
+  h2 {
+    line-height: 2rem;
+    max-width: 900px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 10px auto 0;
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.titleTop {
+  justify-content: flex-start;
+}
+
+.titleCenter {
+  justify-content: center;
+}
+
+.titleBottom {
+  justify-content: flex-end;
+}

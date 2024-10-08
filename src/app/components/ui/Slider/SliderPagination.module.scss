@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  display: flex;
+  button {
+    padding: 0;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.current {
+  display: none;
+  background-color: #fff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}

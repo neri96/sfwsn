@@ -1,0 +1,17 @@
+.container {
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    min-height: 300px;
+  }
+}
+
+.carousel {
+  display: flex;
+  will-change: transform;
+  transition: transform 300ms ease-in-out;
+}

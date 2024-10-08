@@ -1,0 +1,21 @@
+.container {
+  min-height: 400px;
+  flex-grow: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/public/bg-images/contact.webp") no-repeat center center fixed;
+  position: relative;
+}
+
+.title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
+  font-size: 25px;
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+}

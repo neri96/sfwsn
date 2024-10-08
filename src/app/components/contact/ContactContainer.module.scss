@@ -1,0 +1,22 @@
+.contact {
+  padding: 20px 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/bg-images/contact.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 90px);
+  width: 100%;
+  @media (max-width: 1200px) {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media (max-width: 500px) {
+    min-height: calc(100vh - 120px);
+  }
+}

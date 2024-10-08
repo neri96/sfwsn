@@ -1,0 +1,58 @@
+@import "../../../style/theme.scss";
+@import "../../../style/mixin.scss";
+
+.content {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(13, 13, 13, 0.7);
+  border-radius: $borderRadius;
+  @include glassBackground;
+
+  @media (max-width: 940px) {
+    height: 100%;
+  }
+}
+
+.current {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  transition: opacity 150ms ease-in, transform 300ms ease-in-out;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.title {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(13, 13, 13, 0.7);
+  border-radius: $borderRadius;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  h4 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.body {
+  line-height: 25px;
+}
+
+.currentContent {
+  opacity: 1;
+  left: 0;
+}
+
+.greaterThanMiddle {
+  transform: translate(100%);
+}
+
+.notGreaterThanMiddle {
+  transform: translate(-100%);
+}

@@ -1,0 +1,41 @@
+.container {
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footerWrapper {
+  height: 100%;
+  width: 580px;
+  margin-left: -5px;
+  overflow: hidden;
+  display: flex;
+  @media (max-width: 650px) {
+    width: 348px;
+  }
+}
+
+.centered {
+  justify-content: center;
+}
+
+.footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transition: 300ms;
+}
+
+.itemFooter {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 100%;
+    width: calc(100% - 10px);
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  nav {
+    display: flex;
+  }
+}
+
+.list {
+  margin: 0 5px;
+  transition: 300ms;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hamburger {
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .mainNavIcon {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  &:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
+}
+
+.imageWrapper {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+
+.sliderImage {
+  transition: 300ms ease-in-out;
+}
