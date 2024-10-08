@@ -26,8 +26,8 @@ const ItemGallery = ({ data }: { data: string[] }) => {
             key={index}
             src={image}
             alt={`Example of our work`}
-            height={100}
-            width={100}
+            height={400}
+            width={250}
             onClick={() => handleImageClick(index)}
           />
         ))}
